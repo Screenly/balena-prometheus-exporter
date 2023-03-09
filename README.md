@@ -8,7 +8,8 @@ A simple script that pulls down Balena metrics from the API and exposes it in Pr
 ```bash
 $ docker build -t balena-exporter .
 $ docker run -d \
-    -p 0.0.0.0:8000:8000 \
+    --name balena-exporter \
+    -p 8000:8000 \
     -e BALENA_TOKEN=<your balena token> \
     balena-exporter
 ```
