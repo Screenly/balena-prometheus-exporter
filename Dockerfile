@@ -5,8 +5,8 @@ WORKDIR /usr/src/app
 COPY requirements.txt ./
 RUN pip install --no-cache-dir -r requirements.txt
 
-COPY exporter.py .
+COPY main.py .
 
 USER nobody
 
-CMD [ "python", "./exporter.py" ]
+CMD [ "python", "./main.py" ]
